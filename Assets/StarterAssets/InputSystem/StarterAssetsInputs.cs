@@ -12,6 +12,9 @@ namespace StarterAssets
 		public Vector2 look;
 		public bool jump;
 		public bool sprint;
+		public bool flip;
+
+		private CanFlip canFlip;
 
 		[Header("Movement Settings")]
 		public bool analogMovement;
@@ -20,8 +23,13 @@ namespace StarterAssets
 		public bool cursorLocked = true;
 		public bool cursorInputForLook = true;
 
+        private void Start()
+        {
+			canFlip = GetComponent<CanFlip>();
+        }
+
 #if ENABLE_INPUT_SYSTEM && STARTER_ASSETS_PACKAGES_CHECKED
-		public void OnMove(InputValue value)
+        public void OnMove(InputValue value)
 		{
 			MoveInput(value.Get<Vector2>());
 		}
@@ -43,6 +51,12 @@ namespace StarterAssets
 		{
 			SprintInput(value.isPressed);
 		}
+
+		public void OnFlip(InputValue value)
+		{
+			FlipInput(value.isPressed);
+		}
+
 #endif
 
 
@@ -64,6 +78,14 @@ namespace StarterAssets
 		public void SprintInput(bool newSprintState)
 		{
 			sprint = newSprintState;
+		}
+
+		public void FlipInput(bool newFlipState)
+		{
+			if (canFlip.canFlip)
+				flip = newFlipState;
+			else
+				flip = false;
 		}
 
 		private void OnApplicationFocus(bool hasFocus)

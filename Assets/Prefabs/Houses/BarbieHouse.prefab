@@ -31,7 +31,6 @@ Transform:
   m_LocalRotation: {x: 6.7954253e-12, y: 4.0741937e-21, z: 5.9954947e-10, w: 1}
   m_LocalPosition: {x: 1.551, y: 0.04300004, z: 0.793}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3105968674142415409}
   m_RootOrder: 6
@@ -244,7 +243,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 4549
+  m_VersionIndex: 4552
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -262,7 +261,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Shape:
-    rid: 5822035644108505089
+    id: 0
   m_Size: {x: 0.001, y: 0.58, z: 0.25}
   m_Rotation: {x: 0, y: 0, z: 0, w: 1}
   m_PivotLocation: 1
@@ -272,9 +271,8 @@ MonoBehaviour:
     m_Center: {x: -1.3866258, y: 0.7449553, z: -0.79590315}
     m_Extent: {x: 0.00049996376, y: 0.28999996, z: 0.125}
   references:
-    version: 2
-    RefIds:
-    - rid: 5822035644108505089
+    version: 1
+    00000000:
       type: {class: Cube, ns: UnityEngine.ProBuilder.Shapes, asm: Unity.ProBuilder}
 --- !u!23 &3105968673906608735
 MeshRenderer:
@@ -287,7 +285,6 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -350,9 +347,10 @@ GameObject:
   m_Component:
   - component: {fileID: 3105968674142415409}
   - component: {fileID: 3105968674142415408}
+  - component: {fileID: 1640988726}
   m_Layer: 0
   m_Name: BarbieHouse
-  m_TagString: Untagged
+  m_TagString: Flippable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -367,7 +365,6 @@ Transform:
   m_LocalRotation: {x: 0, y: -0.02940449, z: 0, w: 0.9995676}
   m_LocalPosition: {x: -0.702, y: 0.028, z: 4.826}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3105968674648265618}
   - {fileID: 3105968674760074680}
@@ -395,7 +392,20 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 2
+  m_CollisionDetection: 3
+--- !u!135 &1640988726
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3105968674142415414}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1
+  m_Center: {x: 0, y: 0.5, z: 0}
 --- !u!1 &3105968674298221862
 GameObject:
   m_ObjectHideFlags: 0
@@ -427,7 +437,6 @@ Transform:
   m_LocalRotation: {x: 6.7954253e-12, y: 4.0741937e-21, z: 5.9954947e-10, w: 1}
   m_LocalPosition: {x: 1.398, y: -0.247, z: 0.7680001}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3105968674142415409}
   m_RootOrder: 4
@@ -528,7 +537,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 4262
+  m_VersionIndex: 4265
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -546,7 +555,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Shape:
-    rid: 5822035644108505089
+    id: 0
   m_Size: {x: 0.9, y: 1, z: 0.3}
   m_Rotation: {x: 0, y: 0, z: 0, w: 1}
   m_PivotLocation: 1
@@ -556,9 +565,8 @@ MonoBehaviour:
     m_Center: {x: -1.3866249, y: 0.7449553, z: -0.7959032}
     m_Extent: {x: 0.44999996, y: 0.5, z: 0.14999998}
   references:
-    version: 2
-    RefIds:
-    - rid: 5822035644108505089
+    version: 1
+    00000000:
       type: {class: Cube, ns: UnityEngine.ProBuilder.Shapes, asm: Unity.ProBuilder}
 --- !u!23 &3105968674298221858
 MeshRenderer:
@@ -571,7 +579,6 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -655,7 +662,6 @@ Transform:
   m_LocalRotation: {x: 6.7954253e-12, y: 4.0741937e-21, z: 5.9954947e-10, w: 1}
   m_LocalPosition: {x: 1.398, y: -0.247, z: 0.7680001}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3105968674142415409}
   m_RootOrder: 2
@@ -756,7 +762,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 4126
+  m_VersionIndex: 4129
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -774,7 +780,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Shape:
-    rid: 5822035644108505089
+    id: 0
   m_Size: {x: 0.9, y: 1, z: 0.3}
   m_Rotation: {x: 0, y: 0, z: 0, w: 1}
   m_PivotLocation: 1
@@ -784,9 +790,8 @@ MonoBehaviour:
     m_Center: {x: -1.3866249, y: 0.7449553, z: -0.7959032}
     m_Extent: {x: 0.44999996, y: 0.5, z: 0.14999998}
   references:
-    version: 2
-    RefIds:
-    - rid: 5822035644108505089
+    version: 1
+    00000000:
       type: {class: Cube, ns: UnityEngine.ProBuilder.Shapes, asm: Unity.ProBuilder}
 --- !u!23 &3105968674467257309
 MeshRenderer:
@@ -799,7 +804,6 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -883,7 +887,6 @@ Transform:
   m_LocalRotation: {x: 6.7954253e-12, y: 4.0741937e-21, z: 5.9954947e-10, w: 1}
   m_LocalPosition: {x: 1.398, y: -0.247, z: 0.7680001}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3105968674142415409}
   m_RootOrder: 0
@@ -984,7 +987,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 4117
+  m_VersionIndex: 4120
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -1002,7 +1005,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Shape:
-    rid: 5822035644108505089
+    id: 0
   m_Size: {x: 0.9, y: 1, z: 0.3}
   m_Rotation: {x: 0, y: 0, z: 0, w: 1}
   m_PivotLocation: 1
@@ -1012,9 +1015,8 @@ MonoBehaviour:
     m_Center: {x: -1.3866249, y: 0.7449553, z: -0.7959032}
     m_Extent: {x: 0.44999996, y: 0.5, z: 0.14999998}
   references:
-    version: 2
-    RefIds:
-    - rid: 5822035644108505089
+    version: 1
+    00000000:
       type: {class: Cube, ns: UnityEngine.ProBuilder.Shapes, asm: Unity.ProBuilder}
 --- !u!23 &3105968674648265617
 MeshRenderer:
@@ -1027,7 +1029,6 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -1111,7 +1112,6 @@ Transform:
   m_LocalRotation: {x: 6.7954253e-12, y: 4.0741937e-21, z: 5.9954947e-10, w: 1}
   m_LocalPosition: {x: 1.398, y: -0.247, z: 0.7680001}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3105968674142415409}
   m_RootOrder: 1
@@ -1320,22 +1320,22 @@ MonoBehaviour:
   - {x: -1.8366249, y: 0.7449553, z: -0.6459031}
   - {x: -1.3866249, y: 0.7449553, z: -0.6459031}
   m_Textures0:
-  - {x: 0, y: 0}
-  - {x: 0, y: 0}
-  - {x: 0, y: 0}
-  - {x: 0, y: 0}
-  - {x: 0, y: 0}
-  - {x: 0, y: 0}
-  - {x: 0, y: 0}
-  - {x: 0, y: 0}
-  - {x: 0, y: 0}
-  - {x: 0, y: 0}
-  - {x: 0, y: 0}
-  - {x: 0, y: 0}
-  - {x: 0, y: 0}
-  - {x: 0, y: 0}
-  - {x: 0, y: 0}
-  - {x: 0, y: 0}
+  - {x: -1.8366249, y: 1.2449553}
+  - {x: -1.3866249, y: 1.3710938}
+  - {x: -1.3866249, y: 0.7449553}
+  - {x: -1.8366249, y: 0.7449553}
+  - {x: -1.3866249, y: 1.3710938}
+  - {x: -0.93662494, y: 1.2449553}
+  - {x: -0.93662494, y: 0.7449553}
+  - {x: -1.3866249, y: 0.7449553}
+  - {x: -0.93662494, y: 0.7449553}
+  - {x: -0.93662494, y: 0.2449553}
+  - {x: -1.3866249, y: 0.2449553}
+  - {x: -1.3866249, y: 0.7449553}
+  - {x: -1.3866249, y: 0.2449553}
+  - {x: -1.8366249, y: 0.2449553}
+  - {x: -1.8366249, y: 0.7449553}
+  - {x: -1.3866249, y: 0.7449553}
   - {x: 0, y: 0}
   - {x: 0, y: 0}
   - {x: 0, y: 0}
@@ -1355,22 +1355,22 @@ MonoBehaviour:
   m_Textures2: []
   m_Textures3: []
   m_Tangents:
-  - {x: 0, y: 1, z: 0, w: 1}
-  - {x: 0, y: 1, z: 0.00000009519404, w: 1}
-  - {x: 0, y: 1, z: 0.00000019038808, w: 1}
-  - {x: 0, y: 1, z: 0.00000009519404, w: 1}
-  - {x: 0, y: 1, z: 0.00000009519403, w: 1}
-  - {x: 0, y: 1, z: 0, w: 1}
-  - {x: 0, y: 1, z: 0.00000009519403, w: 1}
-  - {x: 0, y: 1, z: 0.00000019038806, w: 1}
-  - {x: 0, y: 1, z: 0, w: 1}
-  - {x: 0, y: 1, z: 0, w: 1}
-  - {x: 0, y: 1, z: 0, w: 1}
-  - {x: 0, y: 1, z: 0, w: 1}
-  - {x: 0, y: 1, z: 0, w: 1}
-  - {x: 0, y: 1, z: 0, w: 1}
-  - {x: 0, y: 1, z: 0, w: 1}
-  - {x: 0, y: 1, z: 0, w: 1}
+  - {x: 1, y: 0, z: 0.00000026490957, w: -1}
+  - {x: 1, y: 0, z: 0.00000013245479, w: -1}
+  - {x: 1, y: 0, z: 0, w: -1}
+  - {x: 1, y: 0, z: 0.00000013245479, w: -1}
+  - {x: 1, y: 0, z: -0.00000013245477, w: -1}
+  - {x: 1, y: 0, z: -0.00000026490954, w: -1}
+  - {x: 1, y: 0, z: -0.00000013245477, w: -1}
+  - {x: 1, y: 0, z: 0, w: -1}
+  - {x: 1, y: 0, z: 0, w: -1}
+  - {x: 1, y: 0, z: 0, w: -1}
+  - {x: 1, y: 0, z: 0, w: -1}
+  - {x: 1, y: 0, z: 0, w: -1}
+  - {x: 1, y: 0, z: 0, w: -1}
+  - {x: 1, y: 0, z: 0, w: -1}
+  - {x: 1, y: 0, z: 0, w: -1}
+  - {x: 1, y: 0, z: 0, w: -1}
   - {x: 0, y: -1, z: 0, w: 1}
   - {x: 0, y: -1, z: 0, w: 1}
   - {x: 0, y: -1, z: 0, w: 1}
@@ -1396,7 +1396,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 4223
+  m_VersionIndex: 4226
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -1414,7 +1414,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Shape:
-    rid: 5822035644108505089
+    id: 0
   m_Size: {x: 0.9, y: 1, z: 0.3}
   m_Rotation: {x: 0, y: 0, z: 0, w: 1}
   m_PivotLocation: 1
@@ -1424,9 +1424,8 @@ MonoBehaviour:
     m_Center: {x: -1.3866249, y: 0.7449553, z: -0.7959032}
     m_Extent: {x: 0.44999996, y: 0.5, z: 0.14999998}
   references:
-    version: 2
-    RefIds:
-    - rid: 5822035644108505089
+    version: 1
+    00000000:
       type: {class: Cube, ns: UnityEngine.ProBuilder.Shapes, asm: Unity.ProBuilder}
 --- !u!23 &3105968674760074687
 MeshRenderer:
@@ -1439,7 +1438,6 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -1523,7 +1521,6 @@ Transform:
   m_LocalRotation: {x: 6.7954253e-12, y: 4.0741937e-21, z: 5.9954947e-10, w: 1}
   m_LocalPosition: {x: 1.398, y: -0.251, z: 0.7680001}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3105968674142415409}
   m_RootOrder: 3
@@ -1732,22 +1729,22 @@ MonoBehaviour:
   - {x: -1.9852315, y: 1.2087408, z: -0.7959032}
   - {x: -1.3867838, y: 1.3707608, z: -0.7959032}
   m_Textures0:
-  - {x: 0, y: 0}
-  - {x: 0, y: 0}
-  - {x: 0, y: 0}
-  - {x: 0, y: 0}
-  - {x: 0, y: 0}
-  - {x: 0, y: 0}
-  - {x: 0, y: 0}
-  - {x: 0, y: 0}
-  - {x: 0, y: 0}
-  - {x: 0, y: 0}
-  - {x: 0, y: 0}
-  - {x: 0, y: 0}
-  - {x: 0, y: 0}
-  - {x: 0, y: 0}
-  - {x: 0, y: 0}
-  - {x: 0, y: 0}
+  - {x: 1.9852315, y: -0.6459031}
+  - {x: 1.3867838, y: -0.6459031}
+  - {x: 1.3867838, y: -0.7959032}
+  - {x: 1.9852315, y: -0.7959032}
+  - {x: 1.3867838, y: -0.6459031}
+  - {x: 0.7883361, y: -0.6459031}
+  - {x: 0.7883361, y: -0.7959032}
+  - {x: 1.3867838, y: -0.7959032}
+  - {x: 0.7883361, y: -0.7959032}
+  - {x: 0.7883361, y: -0.94590306}
+  - {x: 1.3867838, y: -0.94590306}
+  - {x: 1.3867838, y: -0.7959032}
+  - {x: 1.3867838, y: -0.94590306}
+  - {x: 1.9852315, y: -0.94590306}
+  - {x: 1.9852315, y: -0.7959032}
+  - {x: 1.3867838, y: -0.7959032}
   - {x: 0, y: 0}
   - {x: 0, y: 0}
   - {x: 0, y: 0}
@@ -1767,22 +1764,22 @@ MonoBehaviour:
   m_Textures2: []
   m_Textures3: []
   m_Tangents:
-  - {x: 0.9652506, y: 0.2613259, z: 0, w: 1}
-  - {x: 0.9652506, y: 0.2613259, z: 0, w: 1}
-  - {x: 0.9652506, y: 0.2613259, z: 0, w: 1}
-  - {x: 0.9652506, y: 0.2613259, z: 0, w: 1}
-  - {x: 0.9652507, y: -0.2613259, z: 0, w: 1}
-  - {x: 0.9652507, y: -0.2613259, z: 0, w: 1}
-  - {x: 0.9652507, y: -0.2613259, z: 0, w: 1}
-  - {x: 0.9652507, y: -0.2613259, z: 0, w: 1}
-  - {x: 0.9652507, y: -0.26132587, z: 0, w: 1}
-  - {x: 0.9652507, y: -0.26132587, z: 0, w: 1}
-  - {x: 0.9652507, y: -0.26132587, z: 0, w: 1}
-  - {x: 0.9652507, y: -0.26132587, z: 0, w: 1}
-  - {x: 0.9652507, y: 0.2613259, z: 0, w: 1}
-  - {x: 0.9652507, y: 0.2613259, z: 0, w: 1}
-  - {x: 0.9652507, y: 0.2613259, z: 0, w: 1}
-  - {x: 0.9652507, y: 0.2613259, z: 0, w: 1}
+  - {x: -0.9652506, y: -0.2613259, z: 0, w: -1}
+  - {x: -0.9652506, y: -0.2613259, z: 0, w: -1}
+  - {x: -0.9652506, y: -0.2613259, z: 0, w: -1}
+  - {x: -0.9652506, y: -0.2613259, z: 0, w: -1}
+  - {x: -0.9652507, y: 0.2613259, z: 0, w: -1}
+  - {x: -0.9652507, y: 0.2613259, z: 0, w: -1}
+  - {x: -0.9652507, y: 0.2613259, z: 0, w: -1}
+  - {x: -0.9652507, y: 0.2613259, z: 0, w: -1}
+  - {x: -0.9652507, y: 0.26132587, z: 0, w: -1}
+  - {x: -0.9652507, y: 0.26132587, z: 0, w: -1}
+  - {x: -0.9652507, y: 0.26132587, z: 0, w: -1}
+  - {x: -0.9652507, y: 0.26132587, z: 0, w: -1}
+  - {x: -0.9652507, y: -0.2613259, z: 0, w: -1}
+  - {x: -0.9652507, y: -0.2613259, z: 0, w: -1}
+  - {x: -0.9652507, y: -0.2613259, z: 0, w: -1}
+  - {x: -0.9652507, y: -0.2613259, z: 0, w: -1}
   - {x: -0.9652506, y: -0.2613259, z: 0, w: 1}
   - {x: -0.9652506, y: -0.2613259, z: 0, w: 1}
   - {x: -0.9652506, y: -0.2613259, z: 0, w: 1}
@@ -1808,7 +1805,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 4627
+  m_VersionIndex: 4630
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -1826,7 +1823,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Shape:
-    rid: 5822035644108505089
+    id: 0
   m_Size: {x: 0.9, y: 1, z: 0.3}
   m_Rotation: {x: 0, y: 0, z: 0, w: 1}
   m_PivotLocation: 1
@@ -1836,9 +1833,8 @@ MonoBehaviour:
     m_Center: {x: -1.3866249, y: 0.7449553, z: -0.7959032}
     m_Extent: {x: 0.44999996, y: 0.5, z: 0.14999998}
   references:
-    version: 2
-    RefIds:
-    - rid: 5822035644108505089
+    version: 1
+    00000000:
       type: {class: Cube, ns: UnityEngine.ProBuilder.Shapes, asm: Unity.ProBuilder}
 --- !u!23 &3105968675066929866
 MeshRenderer:
@@ -1851,7 +1847,6 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -1935,7 +1930,6 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0.7563365, y: 1.884589, z: 0.7930002}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3105968674142415409}
   m_RootOrder: 5
@@ -2148,7 +2142,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 4375
+  m_VersionIndex: 4378
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -2166,7 +2160,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Shape:
-    rid: 5822035644108505089
+    id: 0
   m_Size: {x: 0.001, y: 0.9, z: 0.25}
   m_Rotation: {x: 0, y: 0, z: 0, w: 1}
   m_PivotLocation: 1
@@ -2176,9 +2170,8 @@ MonoBehaviour:
     m_Center: {x: -1.3866335, y: 0.7449615, z: -0.7959032}
     m_Extent: {x: 0.00049996376, y: 0.45000002, z: 0.125}
   references:
-    version: 2
-    RefIds:
-    - rid: 5822035644108505089
+    version: 1
+    00000000:
       type: {class: Cube, ns: UnityEngine.ProBuilder.Shapes, asm: Unity.ProBuilder}
 --- !u!23 &3105968675264364085
 MeshRenderer:
@@ -2191,7 +2184,6 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -2275,7 +2267,6 @@ Transform:
   m_LocalRotation: {x: 6.7954253e-12, y: 4.0741937e-21, z: 5.9954947e-10, w: 1}
   m_LocalPosition: {x: 1.386, y: -0.49699998, z: 0.793}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3105968674142415409}
   m_RootOrder: 7
@@ -2488,7 +2479,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 4664
+  m_VersionIndex: 4667
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -2506,7 +2497,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Shape:
-    rid: 5822035644108505089
+    id: 0
   m_Size: {x: 0.001, y: 0.5, z: 0.25}
   m_Rotation: {x: 0, y: 0, z: 0, w: 1}
   m_PivotLocation: 1
@@ -2516,9 +2507,8 @@ MonoBehaviour:
     m_Center: {x: -1.3866258, y: 0.7449553, z: -0.79590315}
     m_Extent: {x: 0.00049996376, y: 0.25, z: 0.125}
   references:
-    version: 2
-    RefIds:
-    - rid: 5822035644108505089
+    version: 1
+    00000000:
       type: {class: Cube, ns: UnityEngine.ProBuilder.Shapes, asm: Unity.ProBuilder}
 --- !u!23 &3105968675554221151
 MeshRenderer:
@@ -2531,7 +2521,6 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1

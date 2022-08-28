@@ -157,7 +157,6 @@ namespace StarterAssets
             _hasAnimator = TryGetComponent(out _animator);
 
             JumpAndGravity();
-            GroundedCheck();
             Move();
         }
 
@@ -175,17 +174,31 @@ namespace StarterAssets
             _animIDMotionSpeed = Animator.StringToHash("MotionSpeed");
         }
 
-        private void GroundedCheck()
+        private void OnTriggerEnter(Collider other)
         {
-            // set sphere position, with offset
-            Vector3 spherePosition = new Vector3(transform.position.x, transform.position.y - GroundedOffset,
-                transform.position.z);
-            Grounded = Physics.CheckSphere(spherePosition, GroundedRadius, GroundLayers,
-                QueryTriggerInteraction.Ignore);
-
             // update animator if using character
-            if (_hasAnimator)
+            if (_hasAnimator && other.gameObject.layer == 3)
             {
+                Grounded = true;
+                _animator.SetBool(_animIDGrounded, Grounded);
+            }
+        }
+
+        private void OnTriggerStay(Collider other)
+        {
+            if (_hasAnimator && other.gameObject.layer == 3)
+            {
+                Grounded = true;
+                _animator.SetBool(_animIDGrounded, Grounded);
+            }
+        }
+
+        private void OnTriggerExit(Collider other)
+        {
+            // update animator if using character
+            if (_hasAnimator && other.gameObject.layer == 3)
+            {
+                Grounded = false;
                 _animator.SetBool(_animIDGrounded, Grounded);
             }
         }
