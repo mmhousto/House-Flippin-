@@ -26,6 +26,7 @@ public class Flippable : MonoBehaviour
 
     public void EnableKinematics()
     {
-        rb.isKinematic = true;
+        //rb.isKinematic = true;
+        rb.mass = 50;
     }
 }

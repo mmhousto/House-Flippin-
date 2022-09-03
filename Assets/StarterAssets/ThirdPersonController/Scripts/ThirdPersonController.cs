@@ -177,7 +177,7 @@ namespace StarterAssets
         private void OnTriggerEnter(Collider other)
         {
             // update animator if using character
-            if (_hasAnimator && other.gameObject.layer == 3)
+            if (_hasAnimator && Grounded == false)
             {
                 Grounded = true;
                 _animator.SetBool(_animIDGrounded, Grounded);
@@ -186,7 +186,7 @@ namespace StarterAssets
 
         private void OnTriggerStay(Collider other)
         {
-            if (_hasAnimator && other.gameObject.layer == 3)
+            if (_hasAnimator && Grounded == false)
             {
                 Grounded = true;
                 _animator.SetBool(_animIDGrounded, Grounded);
@@ -196,7 +196,7 @@ namespace StarterAssets
         private void OnTriggerExit(Collider other)
         {
             // update animator if using character
-            if (_hasAnimator && other.gameObject.layer == 3)
+            if (_hasAnimator && Grounded == true)
             {
                 Grounded = false;
                 _animator.SetBool(_animIDGrounded, Grounded);
@@ -317,6 +317,7 @@ namespace StarterAssets
                 {
                     // the square root of H * -2 * G = how much velocity needed to reach desired height
                     _verticalVelocity = Mathf.Sqrt(JumpHeight * -2f * Gravity);
+                    Grounded = false;
 
                     // update animator if using character
                     if (_hasAnimator)

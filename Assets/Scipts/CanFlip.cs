@@ -47,7 +47,9 @@ public class CanFlip : MonoBehaviour
     {
         if(other.CompareTag("Flippable") && _inputs.flip && other.attachedRigidbody.mass <= _rb.mass && other.GetComponent<Flippable>().flipped == false)
         {
-            Flip(other.gameObject);
+            _anim.SetTrigger("Flip");
+            _inputs.flip = false;
+            StartCoroutine(Flip(other.gameObject));
         }
     }
 
@@ -56,16 +58,18 @@ public class CanFlip : MonoBehaviour
         contextPrompt.SetActive(newState);
     }
 
-    private void Flip(GameObject house)
+    private IEnumerator Flip(GameObject house)
     {
+        yield return new WaitForSeconds(.5f);
         var rb = house.GetComponent<Rigidbody>();
         var flippable = house.GetComponent<Flippable>();
         flippable.flipped = true;
         rb.isKinematic = false;
         rb.AddExplosionForce(500f, flippable.explosionPoint.position, 5f);
         flippable.EnableDisableLookAt(false);
-        _anim.SetTrigger("Flip");
-        _inputs.flip = false;
+        StopAllCoroutines();
         flippable.Invoke("EnableKinematics", 2f);
+        Debug.Log("Called");
+        
     }
 }
