@@ -249,6 +249,28 @@
                     "action": "Flip",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f3f7852e-1812-488f-8e92-04d31467a2e8",
+                    "path": "<XInputController>/buttonWest",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Xbox Controller",
+                    "action": "Flip",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "95263a45-b472-4460-bbbd-735e1dfd7af7",
+                    "path": "<DualShockGamepad>/buttonWest",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "PS4 Controller",
+                    "action": "Flip",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         }
