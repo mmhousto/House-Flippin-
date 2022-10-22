@@ -67,9 +67,10 @@ public class CanFlip : MonoBehaviour
         rb.isKinematic = false;
         rb.AddExplosionForce(500f, flippable.explosionPoint.position, 5f);
         flippable.EnableDisableLookAt(false);
+        transform.localScale *= 1.5f;
+        _rb.mass *= 2;
         StopAllCoroutines();
-        flippable.Invoke("EnableKinematics", 2f);
-        Debug.Log("Called");
+        //flippable.Invoke("EnableKinematics", 2f);
         
     }
 }
