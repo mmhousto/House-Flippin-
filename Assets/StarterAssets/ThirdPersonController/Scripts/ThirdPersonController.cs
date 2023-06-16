@@ -287,6 +287,10 @@ namespace StarterAssets
             // update animator if using character
             if (_hasAnimator)
             {
+                if (_input.sprint)
+                    _animationBlend = Mathf.Clamp(_animationBlend, 0f, 2.5f);
+                else
+                    _animationBlend = Mathf.Clamp(_animationBlend, 0f, 1f);
                 _animator.SetFloat(_animIDSpeed, _animationBlend);
                 _animator.SetFloat(_animIDMotionSpeed, inputMagnitude);
             }
