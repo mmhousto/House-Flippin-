@@ -85,21 +85,28 @@ public class CanFlip : MonoBehaviour
 
     private IEnumerator Flip(GameObject house)
     {
-        
-        yield return new WaitForSeconds(.5f);
         var rb = house.GetComponent<Rigidbody>();
         var flippable = house.GetComponent<Flippable>();
+        bool firstFlip = false;
+        if (flippable.flipped == false)
+        {
+            flippable.flipped = true;
+            firstFlip = true;
+        }
+
+        yield return new WaitForSeconds(.5f);
+        
         
         rb.isKinematic = false;
         rb.AddExplosionForce(flipForce, flippable.explosionPoint.position, flipRadius);
         flippable.EnableDisableLookAt(false);
 
-        if (flippable.flipped == false)
+        if (firstFlip)
         {
 
             if (isChanging)
             {
-                newSize = transform.localScale * 2f;
+                newSize = transform.localScale * 1.5f;
                 isChanging = false;
             }
 
@@ -121,20 +128,19 @@ public class CanFlip : MonoBehaviour
             _playerController.SprintSpeed += 2.5f;
             _playerController.JumpHeight += 0.5f;
 
-            if (house.name == "BarbieHouse")
-            {
-                GameObject.FindWithTag("Door").GetComponent<Rigidbody>().isKinematic = false;
-            }
             if (house.name == "Shed")
+            {
+                gameManager.Invoke("NextLevel", 1f);
+            }
+            if (house.name == "SuburbanHouse" && gameManager.housesFlipped[flippable.houseNumber] == false)
             {
                 gameManager.Invoke("NextLevel", 1f);
             }
             if (house.name == "SuburbanHouse")
             {
-                gameManager.Invoke("NextLevel", 1f);
+                gameManager.suburbHouseFlipped++;
             }
 
-            flippable.flipped = true;
             gameManager.housesFlipped[flippable.houseNumber] = true;
 
         }

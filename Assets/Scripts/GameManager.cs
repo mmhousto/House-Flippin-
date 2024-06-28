@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     public int level = 1;
     public GameObject[] cams;
     public bool[] housesFlipped;
+    public int suburbHouseFlipped = 0;
 
     private void Awake()
     {
@@ -23,6 +24,11 @@ public class GameManager : MonoBehaviour
             instance = this;
         }
 
+    }
+
+    private void Update()
+    {
+        if(suburbHouseFlipped == 6 && level == 4) NextLevel();
     }
 
     public void NextLevel()
